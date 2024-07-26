@@ -1,0 +1,23 @@
+﻿@using ASP.NetProject.Models
+
+@model List<CategoryModel>
+<h4> This is the index for Category Contoller </h4>
+<h6> Welcome </h6>
+<a href="/Category/add" class="btn btn-primary">
+	add category
+</a>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var prod in Model)
+		{
+			<tr>
+				<td>@prod.Name</td>
+			</tr>
+		}
+	</tbody>
+</table>
